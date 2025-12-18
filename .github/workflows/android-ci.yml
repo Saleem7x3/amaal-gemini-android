@@ -23,14 +23,15 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Grant execute permission for Gradle
+      - name: Grant execute permission for Gradle wrapper
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: aag-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: amaal-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+
