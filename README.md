@@ -11,4 +11,4 @@ This project includes a GitHub Actions workflow to automatically build a debug A
 ## Requirements
 - Java 17
 - Gradle Wrapper (`gradlew`)
-- Standard Android project structure
+- Standard Android project structure# amaal-gemini-android
